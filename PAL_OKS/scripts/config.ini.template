@@ -1,0 +1,19 @@
+[MYVARS]
+sut_type = 
+webcam = 
+enabled_relays = 
+relay_names = Power Button,Reset Button,Kill Switch,TPM,Clear CMOS,BMC Force Update,NMI Button,BMC Init
+relaycom = 
+bmccom = 
+bioscom = 
+putty_path = C:\Program Files\PuTTY\putty.exe
+putty_logs_path = C:\PAL_Logs\PuTTY
+python_path = 
+pythonsv_path = C:\PythonSV\diamondrapids\startdmr.py
+bmc_ip = 
+bmc_root_pass =
+bmc_debuguser_pass = 
+pdu_user = EMR-PVST
+pdu_pass = 
+sut_ac1 = 
+sut_ac2 = 

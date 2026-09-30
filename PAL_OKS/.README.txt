@@ -1,0 +1,81 @@
+-----------------------------------------------------------------------------------------------------------
+Platform Assistance Launcher (PAL)  
+Version 1.7.5 
+Last Updated: 7/14/2026
+-----------------------------------------------------------------------------------------------------------
+
+Run setup.pyw  
+  
+Python Package Checking will run against the following. These must be present for app functionality.
+colorama  
+compo  
+cryptography  
+ftd2xx
+opencv-python  
+paramiko  
+pexpect
+Pillow  
+psutil  
+pyserial  
+pywin32  
+requests  
+urllib3  
+ymodem  
+  
+This will create a config.ini file from the provided template.  
+This config file is set with some standards but may not fit your environment.  
+Please pay close attention to all variables and configure as needed.  
+  
+iConsole import is functional as long as you have a System Entry with filled values. This will update:  
+  - Relay, BMC, and BIOS COM ports  
+  - BMC IP/FQDN (BMC User is hardcoded to root) 
+  - SUT AC entries  
+  
+The "Create & Pin Shortcut" button will create a shortcut in the same folder as PAL_OKS.pyw.  
+It will attempt to pin this shortcut to the taskbar.  
+  
+Saving will update config.ini with your entries.  
+  
+-----------------------------------------------------------------------------------------------------------
+  
+You may edit config.ini manually after you have ran setup.pyw to initially create it. 
+This really isn't recommended though. Run setup.pyw again if you need to reconfigure.
+  
+BE CAREFUL.  
+  
+sut_type accepted values are 1s and ms  
+webcam values must be yes or no
+
+Use setup.pyw to Configure 8Ch enabled RLY#s and Names!
+
+Passwords in config.ini are encrypted. 
+DO NOT EDIT PASS DIRECTLY. PLAIN TEXT IS NOT SECURE AND WILL BREAK FUNCTIONALITY FOR PASSING PASSWORDS.  
+For proper security, use setup.pyw to set passwords.
+  
+Note that sut_ac entries must be in host:outlet format.  
+Example: jf53nor60ap1010.deacluster.intel.com:80  
+  
+-----------------------------------------------------------------------------------------------------------
+  
+Power functions rely on the ability to SSH to a PDU.
+Ensure your PDU is configured for the Raritan Username / Password you defined in setup.pyw.  
+Ensure this Raritan account has access to control outlets.  
+  
+-----------------------------------------------------------------------------------------------------------
+  
+FTDI Flashing without the C:\Intel\ci.git repository in place will trigger an attempt to clone the repo.  
+If needed, clone manually:  
+git lfs install --skip-smudge  
+git clone https://github.com/intel-innersource/applications.infrastructure.capi.ci.git C:\Intel\ci.git  
+  
+-----------------------------------------------------------------------------------------------------------
+  
+BMC POST Code Monitor relies on BMC being fully booted with SSH active for root.  
+Please make sure your root account is set up with the BMC root Pass you provided in setup.pyw  
+  
+-----------------------------------------------------------------------------------------------------------
+
+You can zoom in and out on the PAL Camera with the mousewheel.
+You can reposition the zoomed screen by moving while holding down left click.
+
+-----------------------------------------------------------------------------------------------------------

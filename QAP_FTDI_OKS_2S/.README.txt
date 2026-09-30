@@ -1,0 +1,32 @@
+Copy folder to C:\ so you end up with C:\QAP_FTDI_OKS_2S
+
+------------------------------------------------------------------------------------------------------------------------
+
+Edit QAP_FTDI_OKS_2S_Config.ini and adjust as needed.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Edit raritan .xml files and adjust:
+
+    <ip></ip>
+    <port>[]</port>
+
+Separate multiple ports with ,
+
+Example:
+    <ip>jf53nor09bp0901.deacluster.intel.com</ip>
+    <port>[21,22]</port>
+
+If multiple PDUs are needed, you may create more raritan xml files (raritan1.xml, raritan2.xml)
+Edit the C:\QAP_FTDI_OKS_2S\scripts\sut_power*.ps1 files and add new lines for the extra raritan xml files.
+
+Example:
+
+python $PYTHON_PATH\Lib\site-packages\pysvtools\raritan\RaritanPower.py -x C:\QAP_FTDI_OKS\raritan1.xml -a on
+python $PYTHON_PATH\Lib\site-packages\pysvtools\raritan\RaritanPower.py -x C:\QAP_FTDI_OKS\raritan2.xml -a on
+
+------------------------------------------------------------------------------------------------------------------------
+
+Right click on the QAP_FTDI_OKS_2S Shortcut and open Properties.
+Adjust the Target for your Python install location if needed.
+You can pin this shortcut to the Taskbar.

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pdu1>
+    <ip>cs16ca101gp0501.deacluster.intel.com</ip>
+    <port>[25,26,27]</port>
+    <user>EMR-PVST</user>
+    <pwd>P@ssword1234!234</pwd>
+</pdu1>
